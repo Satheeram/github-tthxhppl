@@ -4,6 +4,8 @@ import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
 import { Services } from './components/Services';
 import { ServiceSection } from './components/ServiceSection';
+import { About } from './components/About';
+import { Contact } from './components/Contact';
 import { en } from './locales/en';
 import { ta } from './locales/ta';
 import { ProtectedRoute } from './components/ProtectedRoute';
@@ -54,6 +56,11 @@ function App() {
                   language={language}
                 />
               ))}
+              <About content={content.about} />
+              <Contact 
+                content={content.contact}
+                language={language}
+              />
             </div>
           }
         />
