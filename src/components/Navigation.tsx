@@ -40,15 +40,20 @@ export const Navigation: React.FC<NavigationProps> = ({
   return (
     <nav className="bg-primary text-white shadow-sm sticky top-0 z-50" role="navigation" aria-label="Main navigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
+        <div className="flex justify-between items-center h-20">
+          <div className="flex items-center space-x-4">
             <img 
               src={language === 'en' ? '/eng_logo.png' : '/tam_logo.png'} 
               alt="Naeyam Logo" 
-              className="h-10 w-auto transition-transform duration-300 hover:scale-105"
+              className="h-14 w-auto transition-transform duration-300 hover:scale-105"
               loading="eager"
             />
-            <span className="ml-3 text-xl font-bold text-white">Naeyam</span>
+            <div className="flex flex-col">
+              <span className="text-2xl font-bold tracking-wider text-white">NAEYAM</span>
+              <span className="text-xs text-white/80">
+                {language === 'en' ? 'Healing with Care' : 'அன்புடன் குணப்படுத்துதல்'}
+              </span>
+            </div>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
