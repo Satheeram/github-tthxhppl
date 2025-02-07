@@ -155,7 +155,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ services, language }) => {
               <span className={!selectedService ? 'text-gray-400' : 'text-gray-700'}>
                 {selectedService ? 
                   services.find(s => s.id === selectedService)?.title :
-                  (language === 'en' ? 'Select service needed' : 'தேவையான சேவையைத் தேர்ந்தெடுக்கவும்')}
+                  (language === 'en' ? 'Select your service' : 'உங்கள் சேவையைத் தேர்ந்தெடுக்கவும்')}
               </span>
             </div>
             

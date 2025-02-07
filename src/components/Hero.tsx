@@ -13,9 +13,9 @@ interface HeroProps {
 
 const SLIDE_DURATION = 4000;
 const SLIDES = [
-  '/image (8).png',
-  '/image (12).png',
-  '/image (14).png'
+  'https://images.unsplash.com/photo-1584516150909-c43483ee7932?auto=format&fit=crop&q=80', // Indian healthcare worker
+  'https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&q=80', // Indian medical team
+  'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80'  // Indian elderly care
 ];
 
 export const Hero: React.FC<HeroProps> = ({ content, language, services }) => {
@@ -47,7 +47,7 @@ export const Hero: React.FC<HeroProps> = ({ content, language, services }) => {
               loading={index === 0 ? 'eager' : 'lazy'}
             />
             {/* Dark overlay for better text readability */}
-            <div className="absolute inset-0 bg-black/40" />
+            <div className="absolute inset-0 bg-primary/60" />
           </div>
         ))}
       </div>
@@ -62,7 +62,7 @@ export const Hero: React.FC<HeroProps> = ({ content, language, services }) => {
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.2]">
                   {content.title}
                 </h1>
-                <p className="text-xl md:text-2xl text-gray-100">
+                <p className="text-xl md:text-2xl text-white/90">
                   {content.subtitle}
                 </p>
 
@@ -71,10 +71,10 @@ export const Hero: React.FC<HeroProps> = ({ content, language, services }) => {
                   <button
                     onClick={() => setShowContactForm(true)}
                     className="w-[200px] h-[48px] inline-flex justify-center items-center gap-2
-                      bg-primary text-white rounded-xl font-medium
-                      hover:bg-primary/90 active:bg-primary/95 transform hover:translate-y-[-1px]
+                      bg-accent text-white rounded-xl font-medium
+                      hover:bg-accent/90 active:bg-accent/95 transform hover:translate-y-[-1px]
                       transition-all duration-200 shadow-sm hover:shadow
-                      focus:outline-none focus:ring-2 focus:ring-primary/20 focus:ring-offset-2"
+                      focus:outline-none focus:ring-2 focus:ring-accent/20 focus:ring-offset-2"
                   >
                     <Mail className="h-5 w-5" />
                     {language === 'en' ? 'Contact Naeyam' : 'நேயம்-ஐ தொடர்பு கொள்ளவும்'}
